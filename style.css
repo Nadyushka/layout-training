@@ -1,0 +1,60 @@
+.header {
+	padding-top: 40px;
+}
+
+.header__container {
+    max-width: 1298px;
+    margin: 0 auto 2rem;
+    padding: 0.5rem;
+	 background-color: #171717;
+	 border-radius: 50px;
+}
+
+.list {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.list__item {
+	color: #fff;
+	padding: 20px 40px;
+	font-size: 1.25rem;
+	font-family: 'Lufga', sans-serif;
+	cursor: pointer;
+}
+
+.list__item-active {
+	background-color: #FD853A;
+	border-radius: 60px;
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+
+}
+
+.logo {
+	display: flex;
+	padding-left: 84px;
+	padding-right: 84px;
+}
+
+
+@font-face {
+	font-display: fallback;
+	font-family: "Lufga";
+	font-weight: 400;
+	font-style: normal;
+	src: url("../assets/fonts/Lufga-Regular.ttf") format("ttf");
+ }
+
+ @font-face {
+	font-display: fallback;
+	font-family: "Lufga-700";
+	font-weight: 700;
+	font-style: normal;
+	src: url("../assets/fonts/Lufga-Bold.ttf") format("ttf");
+ }
+
