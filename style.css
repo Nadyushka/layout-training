@@ -24,6 +24,7 @@
 	padding: 20px 40px;
 	font-size: 1.25rem;
 	font-family: 'Lufga', sans-serif;
+	font-weight: 400;
 	cursor: pointer;
 }
 
@@ -41,6 +42,165 @@
 	padding-right: 84px;
 }
 
+.hero {
+	max-width: 1298px;
+	margin: 0 auto;
+}
+
+.hero__container {
+	text-align: center;
+}
+
+.hero__greeting {
+	margin: 0 auto;
+	display: inline-block;
+	font-family: 'Lufga', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 10px 25px;
+	border: 1px solid #171717;
+	border-radius: 38px;
+	position: relative;
+}
+
+.hero__greeting::before {
+	content: '';
+	background-image: url('./assets/images/hero-hello.svg');
+	background-repeat: no-repeat;
+	width: 36px;
+	height: 38px;
+	position: absolute;
+	right: -30px;
+	top: -20px;
+	margin-bottom: 10px;
+}
+
+.hero__title {
+	font-size: 95px;
+	margin: 0 0 -50px;
+	font-family: 'Urbanist-600', sans-serif;
+	font-weight: 600;
+	z-index: -1;
+	position: relative;
+}
+
+.hero__title div {
+	position: relative;
+	max-width: max-content;
+	margin: 0 auto;
+}
+
+.hero__title div::before {
+	content: '';
+	background-image: url('./assets/images/hero-title.svg');
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: -66px;
+	bottom: -42px;
+}
+
+.hero__title span {
+	color: #FD853A;
+}
+
+.hero__main {
+	background: url('./assets/images/hero-photo-bg.png') center -250px no-repeat;
+	padding-bottom: 46px;
+}
+
+.hero__text {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 120px;
+}
+
+.hero__comment {
+	width: 328px;
+	text-align: left;
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 500;
+	color: #344054;
+	font-size: 20px;
+	padding-top: 60px;
+	position: relative;
+	letter-spacing: -1.5%;
+}
+
+.hero__comment::after {
+	position: absolute;
+	content: '';
+	background-image: url('./assets/images/hero-comment.svg');
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.hero__expertise {
+	text-align: right;
+	margin-bottom: 207px;
+}
+
+.hero__stars {
+	margin-bottom: 21px;
+}
+
+.hero__years {
+	font-family: 'Urbanist-700', sans-serif;
+	font-weight: 700;
+	font-size: 47px;
+	margin: 0 0 5px;
+	letter-spacing: -2px;
+}
+
+.hero__experince {
+	font-family: 'Lufga', sans-serif;
+	font-size: 20px;
+	margin: 0;
+}
+
+.btns {
+	margin:0 auto;
+	padding: 10px;
+	display: flex;
+	max-width: max-content;
+	border: 2px solid #D0D5DD;
+	border-radius: 50px; 
+}
+
+.btns__btn {
+	padding: 14px 17.5px;
+	font-size: 25px;
+	color: #fff;
+	font-family: 'Lufga', sans-serif;
+	font-weight: 400;
+}
+
+.btns__btn-active {
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 500;
+	padding: 14px 74px 14px 32px;
+	background-color: #FD853A;
+	border: 1px solid #D0D5DD;
+	border-radius: 60px;
+	position: relative;
+}
+
+.btns__btn-active::after {
+	position: absolute;
+	content: '';
+	background-image: url('./assets/images/hero-arrow.svg');
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	right: 32px;
+	top: 8px;
+}
 
 @font-face {
 	font-display: fallback;
@@ -52,9 +212,33 @@
 
  @font-face {
 	font-display: fallback;
+	font-family: "Lufga-500";
+	font-weight: 500;
+	font-style: normal;
+	src: url("../assets/fonts/Lufga-Medium.ttf") format("ttf");
+ }
+
+ @font-face {
+	font-display: fallback;
 	font-family: "Lufga-700";
 	font-weight: 700;
 	font-style: normal;
 	src: url("../assets/fonts/Lufga-Bold.ttf") format("ttf");
+ }
+
+ @font-face {
+	font-display: fallback;
+	font-family: "Urbanist-600";
+	font-weight: 600;
+	font-style: normal;
+	src: url("../assets/fonts/Urbanist-SemiBold.ttf") format("ttf");
+ }
+
+ @font-face {
+	font-display: fallback;
+	font-family: "Urbanist-700";
+	font-weight: 700;
+	font-style: normal;
+	src: url("../assets/fonts/Urbanist-Bold.ttf") format("ttf");
  }
 
