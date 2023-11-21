@@ -226,7 +226,7 @@
 }
 
 .services__container {
-	padding: 116px 70px 52px;
+	padding: 73px 70px 72px;
 }
 
 .services__top {
@@ -276,7 +276,7 @@
 	font-family: 'Lufga-500', sans-serif;
 	font-weight: 500;
 	font-size: 32px;
-	border: 1px solid #686868;
+	border: 1px solid #FCFCFD;
 	border-radius: 50px 50px 0 0;
 	position: relative;
 	z-index: 1;
@@ -303,8 +303,8 @@
 
 .example__center {
 	height: 120px;
-	border-left: 1px solid #686868;
-	border-right: 1px solid #686868;
+	border-left: 1px solid #FCFCFD;
+	border-right: 1px solid #FCFCFD;
 	position: relative;
 	z-index: 1;
 }
@@ -359,7 +359,6 @@
 
 .slider {
 	margin: 0 auto;
-	margin-bottom: 52px;
 	display: flex;
 	gap: 12px;
 	justify-content: center;
@@ -377,6 +376,82 @@
 	height: 15px;
 	border-radius: 20px;
 	background-color:rgb(253, 133, 58);
+}
+
+.expirience {
+	max-width: 1298px;
+	margin: 0 auto;
+}
+
+.expirience__container {
+	padding-top: 85px;
+	padding-bottom: 155px;
+}
+
+.expirience__title {
+	text-align: center;
+	font-size: 64px;
+	text-transform: capitalize;
+	color: #344054;
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 600;
+	margin: 0 0 85px;
+}
+
+.expirience__title span {
+	color: #FD853A;
+}
+
+.expirience__info {
+	position: relative;
+}
+
+.positon {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 48px;
+}
+
+.positon__left-block {
+max-width: 510px;
+}
+
+.position__company {
+	color: #344054;
+	font-size: 40px;
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	margin-bottom: 14px;
+}
+
+.position__work-period {
+	color: #98A2B3;
+	font-size: 24px;
+}
+
+.positon__right-block {
+	width: 444px;
+}
+
+.expirience__img {
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+
+.position__name {
+	color: #344054;
+	margin-bottom: 14px;
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+.position__description {
+	color: #98A2B3;
+	font-family: 'Lufga-400', sans-serif;
+	font-weight: 5700;
+	font-size: 20px;
 }
 
 
