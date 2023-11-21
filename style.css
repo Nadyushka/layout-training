@@ -107,7 +107,7 @@
 
 .hero__main {
 	background: url('./assets/images/hero-photo-bg.png') center -250px no-repeat;
-	padding-bottom: 46px;
+	padding-bottom: 38px;
 	position: relative;
 }
 
@@ -394,7 +394,7 @@
 	text-transform: capitalize;
 	color: #344054;
 	font-family: 'Lufga-500', sans-serif;
-	font-weight: 600;
+	font-weight: 500;
 	margin: 0 0 85px;
 }
 
@@ -454,13 +454,109 @@ max-width: 510px;
 	font-size: 20px;
 }
 
+.reason {
+	background-color: #F2F4F7;
+	border-radius: 50px;
+}
+
+.reason__container {
+	
+	padding-bottom: 103px;
+	max-width: 1298px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.reason__img {
+transition: 0.5s all;
+padding-top: 93px;
+padding-left: 20px;
+background-size: 0;
+background-position: center center;
+background-repeat: no-repeat;
+}
+
+.reason__container:hover .reason__img{
+	background-image: url('./assets/images/reason-img-hover.svg');
+	background-size: 100%;
+}
+
+.reason__info {
+	padding-top: 166px;
+}
+
+.reason__title {
+	margin: 0 0 47px;
+	color: #344054;
+	font-family: 'Lufga-600', sans-serif;
+	font-weight: 600;
+	font-size: 64px;
+}
+
+.reason__title span {
+	color: #FD853A;
+}
+
+.reason__text {
+	margin: 0 0 47px;
+	max-width: 444px;
+	color: #98A2B3;
+	font-family: 'Lufga', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.reason-list {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 47px;
+}
+
+.reason-list__item {
+	flex: 1 1 50%;
+}
+
+.reason-list__figure {
+	color: #1D2939;
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 500;
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.reason-list__text {
+	color: #667085;
+	font-family: 'Lufga', sans-serif;
+	font-size: 20px;
+}
+
+.reason__button {
+	padding: 33px 59px;
+	border-radius: 32px;
+	border: 1px solid #151515;
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: #151515;
+	cursor: pointer;
+}
+
+
+@font-face {
+	font-display: fallback;
+	font-family: "Lufga-300";
+	font-weight: 300;
+	font-style: normal;
+	src: url("./assets/fonts/Lufga-Light.ttf") format("truetype");
+ }
+
 
 @font-face {
 	font-display: fallback;
 	font-family: "Lufga";
 	font-weight: 400;
 	font-style: normal;
-	src: url("../assets/fonts/Lufga-Regular.ttf") format("ttf");
+	src: url("./assets/fonts/Lufga-Regular.ttf") format("truetype");
  }
 
  @font-face {
@@ -468,7 +564,15 @@ max-width: 510px;
 	font-family: "Lufga-500";
 	font-weight: 500;
 	font-style: normal;
-	src: url("../assets/fonts/Lufga-Medium.ttf") format("ttf");
+	src: url("./assets/fonts/Lufga-Medium.ttf") format("truetype");
+ }
+
+ @font-face {
+	font-display: fallback;
+	font-family: "Lufga-600";
+	font-weight: 600;
+	font-style: normal;
+	src: url("./assets/fonts/Lufga-SemiBold.ttf") format("truetype");
  }
 
  @font-face {
@@ -476,7 +580,7 @@ max-width: 510px;
 	font-family: "Lufga-700";
 	font-weight: 700;
 	font-style: normal;
-	src: url("../assets/fonts/Lufga-Bold.ttf") format("ttf");
+	src: url("./assets/fonts/Lufga-Bold.ttf") format("truetype");
  }
 
  @font-face {
@@ -484,7 +588,7 @@ max-width: 510px;
 	font-family: "Urbanist-600";
 	font-weight: 600;
 	font-style: normal;
-	src: url("../assets/fonts/Urbanist-SemiBold.ttf") format("ttf");
+	src: url("./assets/fonts/Urbanist-SemiBold.ttf") format("truetype");
  }
 
  @font-face {
@@ -492,6 +596,6 @@ max-width: 510px;
 	font-family: "Urbanist-700";
 	font-weight: 700;
 	font-style: normal;
-	src: url("../assets/fonts/Urbanist-Bold.ttf") format("ttf");
+	src: url("./assets/fonts/Urbanist-Bold.ttf") format("truetype");
  }
 
