@@ -754,6 +754,7 @@ background-repeat: no-repeat;
 	background: url('./assets/images/testimonials-bg.png') 0 0 no-repeat;
 	max-width: 1440px;
 	margin: 0 auto;
+	border-radius: 50px;
 }
 
 .testimnials__container {
@@ -770,6 +771,17 @@ background-repeat: no-repeat;
 	max-width: 465px;
 	letter-spacing: -1.5%;
 	text-align: center;
+	position: relative;
+}
+
+.testimnials__title::after {
+	content: '';
+	position: absolute;
+	top: -12px;
+	right: 0;
+	width: 32px;
+	height: 32px;
+	background: url('./assets/images/testimonials-title-img.svg') 0 0 no-repeat;
 }
 
 .testimnials__title span {
@@ -785,6 +797,27 @@ background-repeat: no-repeat;
 	max-width: 745px;
 	letter-spacing: -1.5%;
 	text-align: center;
+	position: relative;
+}
+
+.testimnials__about::after {
+	content: '';
+	position: absolute;
+	top: -160px;
+	right: -60px;
+	width: 32px;
+	height: 32px;
+	background: url('./assets/images/testimonials-star-top.svg') 0 0 no-repeat;
+}
+
+.testimnials__about::before {
+	content: '';
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	width: 32px;
+	height: 32px;
+	background: url('./assets/images/testimonials-star-bottom.svg') 0 0 no-repeat;
 }
 
 .testimnials__blocks {
@@ -872,6 +905,126 @@ background-repeat: no-repeat;
 	font-size: 20px;
 	color: #F9FAFB;
 }
+
+.discuss {
+	padding-top: 98px;
+	padding-bottom: 98px;
+}
+
+.discuss__container {
+	max-width: 832px;
+	margin: 0 auto;
+}
+
+.discuss__title {
+	font-family: 'Lufga-600', sans-serif;
+	font-weight: 600;
+	font-size: 64px;
+	color: #344054;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.discuss__title span {
+	color: #FD853A;
+}
+
+.discuss__input {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.discuss__input-aria {
+	padding: 32px 14px 32px 95px;
+	border: 1px solid #FD853A;
+	border-radius: 50px;
+	width: 100%;
+	font-size: 20px;
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 500;
+	color: #000;
+}
+
+.discuss__input-aria::placeholder {
+	font-size: 20px;
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 500;
+	color: #000;
+}
+
+.discuss__icon {
+	position: absolute;
+	width: 64px;
+	height: 58px;
+	background: url('./assets/images/benefits-email.svg') center center no-repeat;
+	background-color: #FFEAD5;
+	border-radius: 50px;
+	left: 14px;
+	top: 14px;
+}
+
+.discuss__button {
+	position: absolute;
+	right: 14px;
+	top: 14px;
+	padding: 20px 40px;
+	font-family: 'Lufga-500', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	color: #fff;
+	background-color: #FD853A;
+	border-radius: 60px;
+	border: none;
+	width: fit-content;
+}
+
+.discuss__benefits {
+	display: flex;
+	gap: 93px;
+	justify-content: center;
+}
+
+.discuss__benefit {
+	font-family: 'Lufga', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+	padding-left: 24px;
+	position: relative;
+}
+
+.discuss__benefit::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+}
+
+.discuss__benefit:nth-of-type(1)::before {
+	background: url('./assets/images/benefits-icon-1.svg') center -3px no-repeat;
+}
+
+.discuss__benefit:nth-of-type(2)::before {
+	background: url('./assets/images/benefits-icon-2.svg') center -3px no-repeat;
+}
+
+.discuss__benefit:nth-of-type(3)::before {
+	background: url('./assets/images/benefits-icon-3.svg') center -3px no-repeat;
+}
+
+.line {
+	border-radius: 50px 0 50px 0;
+	background-color: #FB6514;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.blog {
+	
+}
+
 
 @font-face {
 	font-display: fallback;
