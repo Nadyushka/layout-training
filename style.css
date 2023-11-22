@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 .header {
 	padding-top: 40px;
 }
@@ -226,7 +230,7 @@
 }
 
 .services__container {
-	padding: 73px 70px 72px;
+	padding: 68px;
 }
 
 .services__top {
@@ -541,6 +545,211 @@ background-repeat: no-repeat;
 	cursor: pointer;
 }
 
+.portfolio {
+	padding-bottom: 97px;
+}
+
+.portfolio__container {
+	padding-top: 97px;
+	max-width: 1290px;
+	margin: 0 auto;
+}
+
+.portfolio__top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 48px;
+	align-items: center;
+}
+
+.portfolio__title {
+	margin: 0;
+	max-width: 643px;
+	font-family: 'Lufga-600', sans-serif;
+	font-weight: 600;
+	font-size: 64px;
+	color: #151515;
+}
+
+.portfolio__title span {
+	color: #FD853A;
+}
+
+.portfolio__btn {
+	padding: 20px 40px;
+	border-radius: 60px;
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	color: #fff;
+	background-color: #FD853A;
+	cursor: pointer;
+}
+
+.portfolio__examples {
+	display: flex;
+	gap: 24px;
+	margin-bottom: 47px;
+}
+
+.work-example {
+	padding: 10px 10px 20px;
+	background-image: url('./assets/images/portfolio-img.png');
+	background-repeat: no-repeat;
+	width: 633px;
+	background-size: contain;	
+
+}
+
+.work-example__main {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 5;
+	cursor: pointer;
+
+}
+
+.work-example__btn {
+	margin-bottom: 32%;
+	width: 60px;
+	height: 60px;
+	border-radius: 64px;
+	border: 1px solid #FD853A;
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s all;
+}
+
+.work-example:hover .work-example__btn {
+	background-color: #FD853A;
+}
+
+.work-example:hover .work-example__btn svg path{
+	fill: #FFFAF5;
+}
+
+.work-example__title {
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	font-size: 70px;
+	color: #FFFAF5;
+	margin: 0;
+}
+
+.work-example:hover .work-example__title {
+	visibility: hidden;
+}
+
+.work-example__back {
+	position: absolute;
+	z-index: -1;
+	transition: 0.5s transform;
+	margin-top: -170px;
+	max-width: 613px;
+	visibility: hidden;
+}
+
+.work-example__container {
+	position: relative;
+	z-index: 1;
+}
+
+.work-example__back::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	backdrop-filter: blur(10px);
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: -1;
+	border-radius: 24px;
+}
+
+.work-example:hover .work-example__info-visible{
+	z-index: 10;
+	height: auto;
+	padding: 20px 24px;
+	transform: translateY(-40px);
+	visibility: visible;
+}
+
+.work-example__info-title {
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	font-size: 70px;
+	color: #FFFAF5;
+	margin: 0 0 20px;
+}
+
+.work-example__info-text {
+	margin: 0;
+	font-family: 'Lufga', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #FFFAF5;
+}
+
+.portfolio__marks {
+	display: flex;
+	gap: 14px;
+	margin: 48px auto;
+	justify-content: center;
+} 
+
+.portfolio__mark {
+	list-style-type: none;
+	color: #000000;
+	font-size: 20px;
+	font-family: 'Inter', sans-serif;
+	padding: 15px 32px;
+	border-radius: 34px;
+	background-color: #F2F4F7;
+}
+
+.portfolio__bottom {
+	max-width: 752px;
+	margin: 0 auto;
+}
+
+.portfolio__info {
+	display: flex;
+	margin-bottom: 24px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.portfolio__project-title {
+	font-family: 'Lufga-700', sans-serif;
+	font-weight: 700;
+	font-size: 48px;
+	color: #344054;
+	margin: 0;
+	letter-spacing: -1.5%;
+}
+
+.portfolio__open-project {
+	width: 58px;
+	height: 58px;
+	border-radius: 60px;
+	cursor: pointer;
+	border: none;
+	background: url('./assets/images/hero-arrow.svg') center center no-repeat;
+	background-color: #FD853A;
+}
+
+.portfolio__project-text {
+	font-family: 'Lufga', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	color: #344054;
+	text-align: center;
+}
+
 
 @font-face {
 	font-display: fallback;
@@ -597,5 +806,13 @@ background-repeat: no-repeat;
 	font-weight: 700;
 	font-style: normal;
 	src: url("./assets/fonts/Urbanist-Bold.ttf") format("truetype");
+ }
+
+ @font-face {
+	font-display: fallback;
+	font-family: "Inter";
+	font-weight: 400;
+	font-style: normal;
+	src: url("./assets/fonts/Inter-Regular.ttf") format("truetype");
  }
 
