@@ -127,3 +127,27 @@ sliderService.forEach((elem,idx) =>
 	 function updateSliderPosition() {
 		slider.style.transform = `translateX(${currentTranslate}px)`;
 	 }
+
+
+
+const sliderPortfolio = document.querySelectorAll('.portfolio .slider .slider__elem')
+let sliderPortfolioBlock = document.querySelector('.portfolio__examples')
+let sliderPortfolioLenght
+const sliderPortfolioContainer = document.querySelector('.portfolio__examples-block')
+
+console.log(sliderPortfolio)
+
+sliderPortfolio.forEach((elem,idx) => 
+	elem.addEventListener('click', ()=> {
+
+		sliderPortfolioLenght = sliderPortfolioBlock.getBoundingClientRect().width
+
+		const flexGap = 25.5
+
+		sliderPortfolioContainer.style.transform = `translateX(-${ (sliderPortfolioLenght + flexGap) * idx}px)`;
+		
+		sliderPortfolio.forEach(item => item.classList.remove('slider-active'))
+
+		sliderPortfolio[idx].classList.add('slider-active')
+		
+	}))
