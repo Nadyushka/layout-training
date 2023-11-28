@@ -1,24 +1,60 @@
+/** Бургер-меню */
+
 const burgerMenu = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.header__mobile-menu')
-const closeMobileMenu = document.querySelector('.header__mobile-close')
+const closeMobileMenuBtn = document.querySelector('.header__mobile-close')
 
 burgerMenu.addEventListener('click', () => {
  	mobileMenu.classList.toggle('header__mobile-menu_active');
 });
 
-closeMobileMenu.addEventListener('click', () => {
+closeMobileMenuBtn.addEventListener('click', () => {
 	mobileMenu.classList.toggle('header__mobile-menu_active');
 });
 
+
+/** Выбор значения в меню */
+
 const menuItems = document.querySelectorAll('.list__item')
+const mobileMenuItems = document.querySelectorAll('.mobile-list .list__item')
 
 menuItems.forEach(menuItem => {
 	menuItem.addEventListener('click', () => {
 		menuItems.forEach(item => item.classList.remove('list__item-active'))
+		mobileMenuItems.forEach(item => item.classList.remove('list__item-active'))
 
 		menuItem.classList.toggle('list__item-active');
+
+		mobileMenuItems.forEach(mobileItem => {
+			if(mobileItem.innerHTML === menuItem.innerHTML) {
+				mobileItem.classList.add('list__item-active')
+			} else {
+				mobileItem.classList.remove('list__item-active')
+			}
+		}
+			)
   });
 })
+
+mobileMenuItems.forEach(mobileItem => {
+	mobileItem.addEventListener('click', () => {
+		menuItems.forEach(item => item.classList.remove('list__item-active'))
+		mobileMenuItems.forEach(item => item.classList.remove('list__item-active'))
+
+		mobileItem.classList.toggle('list__item-active');
+
+		menuItems.forEach(menuItem => {
+			if(mobileItem.innerHTML === menuItem.innerHTML) {
+				menuItem.classList.add('list__item-active')
+			} else {
+				menuItem.classList.remove('list__item-active')
+			}
+		}
+			)
+  });
+})
+
+/** Анимация в секции hero */
 
 const heroBtns = document.querySelectorAll('.btns__btn')
 const heroMainImg = document.querySelector('.hero__main-img');
@@ -40,59 +76,49 @@ heroBtns.forEach(heroBtn => {
   });
 })
 
-const sliderService = document.querySelectorAll('.services__container .slider .slider__elem')
-let sliderServiceBlock = document.querySelector('.services__examples .example')
-let sliderServiceBlockLenght
-const sliderContainer = document.querySelector('.services__examples')
+/** Слайдер вкладки service */
+
+const sliderServiceContainer = document.querySelector('.services__examples')
+const sliderServiceElems = document.querySelectorAll('.services__container .slider .slider__elem')
+const serviceElem = document.querySelector('.services__examples .example')
+let sliderServiceElemLenght
+const flexGap = 25.5
 
 
-sliderService.forEach((elem,idx) => 
+sliderServiceElems.forEach((elem,idx) => 
 	elem.addEventListener('click', ()=> {
 
-	sliderServiceBlockLenght = sliderServiceBlock.getBoundingClientRect().width
+		sliderServiceElemLenght = serviceElem.getBoundingClientRect().width
 
-		const flexGap = 25.5
-
-		sliderContainer.style.transform = `translateX(-${ (sliderServiceBlockLenght + flexGap) * idx}px)`;
+		sliderServiceContainer.style.transform = `translateX(-${ (sliderServiceElemLenght + flexGap) * idx}px)`;
 		
-		sliderService.forEach(item => item.classList.remove('slider-active'))
+		sliderServiceElems.forEach(item => item.classList.remove('slider-active'))
 
-		sliderService[idx].classList.add('slider-active')
+		sliderServiceElems[idx].classList.add('slider-active')
 		
 	}))
 
 
-	const slider = document.querySelector('.testimnials__wrapper');
-
-	window.addEventListener('resize', () => {
-		sliderService.forEach(item => item.classList.remove('slider-active'))
-		sliderService[0].classList.add('slider-active')
-		document.querySelector('.mobile-list .list__item').classList.add('list__item-active')
-		sliderContainer.style.transform = `none`;
-
-		if(window.innerWidth > 1250) {
-			slider.style.transform = `transform: translateX(-33%)`;
-		}
-	 });
-
-
+/** Слайдер для секции testimonials */
 	
+const sliderTestimonials = document.querySelector('.testimnials__wrapper');
+
 	 let isDragging = false;
 	 let startPosition = 0;
 	 let currentTranslate = 0;
 	 let previousTranslate = 0;
 	 
-	 slider.addEventListener('mousedown', dragStart);
-	 slider.addEventListener('touchstart', dragStart);
+	 sliderTestimonials.addEventListener('mousedown', dragStart);
+	 sliderTestimonials.addEventListener('touchstart', dragStart);
 	 
-	 slider.addEventListener('mousemove', drag);
-	 slider.addEventListener('touchmove', drag);
+	 sliderTestimonials.addEventListener('mousemove', drag);
+	 sliderTestimonials.addEventListener('touchmove', drag);
 	 
-	 slider.addEventListener('mouseup', dragEnd);
-	 slider.addEventListener('touchend', dragEnd);
+	 sliderTestimonials.addEventListener('mouseup', dragEnd);
+	 sliderTestimonials.addEventListener('touchend', dragEnd);
 	 
-	 slider.addEventListener('mouseleave', dragEnd);
-	 slider.addEventListener('touchcancel', dragEnd);
+	 sliderTestimonials.addEventListener('mouseleave', dragEnd);
+	 sliderTestimonials.addEventListener('touchcancel', dragEnd);
 	 
 	 function dragStart(event) {
 		if (event.type === 'touchstart') {
@@ -125,29 +151,47 @@ sliderService.forEach((elem,idx) =>
 	 }
 	 
 	 function updateSliderPosition() {
-		slider.style.transform = `translateX(${currentTranslate}px)`;
+		sliderTestimonials.style.transform = `translateX(${currentTranslate}px)`;
 	 }
 
+/** Слайдер для секции portfolio */
 
-
-const sliderPortfolio = document.querySelectorAll('.portfolio .slider .slider__elem')
-let sliderPortfolioBlock = document.querySelector('.portfolio__examples')
-let sliderPortfolioLenght
 const sliderPortfolioContainer = document.querySelector('.portfolio__examples-block')
+const sliderPortfolioElems = document.querySelectorAll('.portfolio .slider .slider__elem')
+const portfolioItem = document.querySelector('.portfolio__examples')
+let sliderPortfolioLenght
 
-console.log(sliderPortfolio)
-
-sliderPortfolio.forEach((elem,idx) => 
+sliderPortfolioElems.forEach((elem,idx) => 
 	elem.addEventListener('click', ()=> {
 
-		sliderPortfolioLenght = sliderPortfolioBlock.getBoundingClientRect().width
+		sliderPortfolioLenght = portfolioItem.getBoundingClientRect().width
 
 		const flexGap = 25.5
 
 		sliderPortfolioContainer.style.transform = `translateX(-${ (sliderPortfolioLenght + flexGap) * idx}px)`;
 		
-		sliderPortfolio.forEach(item => item.classList.remove('slider-active'))
+		sliderPortfolioElems.forEach(item => item.classList.remove('slider-active'))
 
-		sliderPortfolio[idx].classList.add('slider-active')
+		sliderPortfolioElems[idx].classList.add('slider-active')
 		
 	}))
+
+
+		/** Обнуление слайдеров при изменении ширины окна */
+
+
+		window.addEventListener('resize', () => {
+			sliderServiceElems.forEach(item => item.classList.remove('slider-active'))
+			sliderServiceElems[0].classList.add('slider-active')
+			sliderServiceContainer.style.transform = null;
+
+			sliderPortfolioElems.forEach(item => item.classList.remove('slider-active'))
+			sliderPortfolioElems[0].classList.add('slider-active')
+			sliderPortfolioContainer.style.transform = null;
+
+			sliderTestimonials.style.transform = null;
+	
+			if(window.innerWidth > 1250) {
+				sliderTestimonials.style.transform = `transform: translateX(-33%)`;
+			}
+		 });
