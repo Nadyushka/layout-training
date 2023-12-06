@@ -192,6 +192,26 @@ sliderPortfolioElems.forEach((elem,idx) =>
 			sliderTestimonials.style.transform = null;
 	
 			if(window.innerWidth > 1250) {
-				sliderTestimonials.style.transform = `transform: translateX(-33%)`;
+				sliderTestimonials.style.transform = `translateX(-33%)`;
+			}
+
+		 });
+
+
+		 /** Параллакс для блока services */
+
+		 const leftImg = document.querySelector('.services__img-left')
+		 const topImg = document.querySelector('.services__img-top')
+		 const rightImg = document.querySelector('.services__img-right')
+
+		 window.addEventListener('scroll', function() {
+			if (window.innerWidth > 1050) {
+		 
+			  let xPercentage = window.pageXOffset / window.innerWidth;
+			  let yPercentage = window.pageYOffset / window.innerWidth;
+		 
+			  leftImg.style.transform = `translateY(${xPercentage * 50}px)`;
+			  topImg.style.transform = `translateY(${xPercentage * 50}px)`;
+			  rightImg.style.transform = `translateY(${xPercentage * 30}px)`;
 			}
 		 });
