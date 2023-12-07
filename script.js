@@ -200,18 +200,28 @@ sliderPortfolioElems.forEach((elem,idx) =>
 
 		 /** Параллакс для блока services */
 
+
+		 const serviceBlock = document.querySelector('.services')
 		 const leftImg = document.querySelector('.services__img-left')
 		 const topImg = document.querySelector('.services__img-top')
 		 const rightImg = document.querySelector('.services__img-right')
 
-		 window.addEventListener('scroll', function() {
-			if (window.innerWidth > 1050) {
+		 serviceBlock.addEventListener('mouseover', function(e) {
+			if (window.innerWidth > 900) {
 		 
-			  let xPercentage = window.pageXOffset / window.innerWidth;
-			  let yPercentage = window.pageYOffset / window.innerWidth;
-		 
-			  leftImg.style.transform = `translateY(${xPercentage * 50}px)`;
-			  topImg.style.transform = `translateY(${xPercentage * 50}px)`;
-			  rightImg.style.transform = `translateY(${xPercentage * 30}px)`;
+				let xPercentage = e.clientX / window.innerWidth;
+				let yPercentage = e.clientY / window.innerHeight;
+	 
+				if (Math.abs(xPercentage - 0.5) > Math.abs(yPercentage - 0.5)) {
+					 // Движение по горизонтали
+					 leftImg.style.transform = `translateY(${yPercentage * 60}px)`;
+					 topImg.style.transform = `rotate(-${xPercentage * 40}deg)`;
+					 rightImg.style.transform = `translateY(-${yPercentage * 100}px)`;
+				} else {
+					 // Движение по вертикали
+					 leftImg.style.transform = `translateX(${xPercentage * 60}px)`;
+					 topImg.style.transform = `rotate(${xPercentage * 40}deg)`;
+					 rightImg.style.transform = `translateX(-${xPercentage * 100}px)`;
+				}
 			}
 		 });

@@ -464,6 +464,7 @@
 .services__img-top {
 	position: absolute;
 	display: block;
+	transition: 0.5s transform;
 }
 
 .services__img-left {
@@ -481,10 +482,15 @@
 	top: 7%;
 }
 
-@media(max-width: 1050px) {
-	.services__img-left,
-	.services__img-right,
+@media(max-width: 1250px) {
 	.services__img-top {
+		display: none;
+	}
+}
+
+@media(max-width: 900px) {
+	.services__img-left,
+	.services__img-right {
 		display: none;
 	}
 }
